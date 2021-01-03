@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  background: #262626;
+  height: 100vh;
+}
+
+.homeScreen {
+  margin-top: 20%;
+}
+
+#profilePic {
+  width: 20vw;
+  height: inherit;
+  margin-top: 3rem;
+  margin-left: 14rem;
+}
+#picHome {
+  background-image: url("../images/newGimp.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.about-div {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-left: 1.5em;
+}
+#description {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 1.5rem;
+}
+
+a img {
+  width: 14vw;
+  height: 25vh;
+}
+#control {
+  width: 90%;
+  max-width: 1000px;
+  min-width: 500px;
+  margin: 50px auto;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  height: 100px;
+  width: 100px;
+  border-radius: 16px 16px 0 0;
+}
+
+.tabs-block {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+li {
+  text-align: center;
+  margin: 0;
+  padding: 18px 12px;
+  flex: auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1bb1a5;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 20px 20px 0 0;
+  user-select: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: rgba(207, 66, 66, 0.863);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: rgb(199, 175, 175);
+}
+
+.article-block {
+  width: 100%;
+  overflow: hidden;
+  /* height: 100%; */
+  position: relative;
+  border-radius: 24px;
+}
+
+.article {
+  position: absolute;
+  width: 100%;
+  padding: 40px;
+  left: 0;
+  top: 0;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#article4 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#article2 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 2fr;
+}
+
+.a {
+  grid-column: 1 / span 2;
+}
+.b {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  width: auto;
+  height: 90%;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.c {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  overflow: hidden;
+}
+.d {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  overflow: hidden;
+  margin-right: 2em;
+}
