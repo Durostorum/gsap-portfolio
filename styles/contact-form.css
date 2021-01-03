@@ -1,0 +1,40 @@
+#status {
+  width: 60%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  height: 1.5em;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: #fff;
+  animation: status 10s ease forwards;
+}
+#connections {
+  text-align: center;
+  margin: 20px 0 -40px 20px;
+  opacity: 0.8;
+}
+#connections i {
+  padding-right: 0.4em;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
