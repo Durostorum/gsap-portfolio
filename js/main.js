@@ -90,6 +90,7 @@ for(let i=0; i<pfPics.length;i++){
     gsap.to(e.target.querySelector('img'),0.5, {scale:"1"})
   })
 }
-      
+     document.querySelector("#loadOverlay").style.display="none"
     };
-});
+    console.log(document.querySelector("#loadOverlay"))
+  });
