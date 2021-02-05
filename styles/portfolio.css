@@ -15,7 +15,7 @@ a img {
   grid-column: 3;
   grid-row: 1 / span 2;
   width: auto;
-  height: 90%;
+  height: 100%;
   justify-self: center;
   overflow: hidden;
 }

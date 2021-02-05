@@ -92,5 +92,5 @@ for(let i=0; i<pfPics.length;i++){
 }
      document.querySelector("#loadOverlay").style.display="none"
     };
-    console.log(document.querySelector("#loadOverlay"))
+    
   });
