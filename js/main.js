@@ -13,26 +13,26 @@ let oldHeight;
 let newHeight = articles[0].offsetHeight;
 for (let i = 0; i < targets.length; i++) {
   targets[i].index = i;
-  TweenMax.set(articles[i], {autoAlpha:0}); // hide all articles 
+  gsap.set(articles[i], {autoAlpha:0}); // hide all articles 
   targets[i].addEventListener("click", doCoolStuff);
   timelines.push(new TimelineMax({paused:true})); // create an array of timelines
 }
 
 // create the 4 unique timelines
-timelines[1].staggerFrom("#article2 h1, #article2 p, #article2 img", 0.8, {autoAlpha:0, ease:Linear.easeNone}, 0.25 );
+timelines[1].from("#article2 h1, #article2 p, #article2 img", {autoAlpha:0, duration:0.8, ease:Linear.easeNone, duration:0.8} );
 
 timelines[2].from("#article4 h1, #article4 p", 0.5, {x:100, autoAlpha:0});
 timelines[2].from(".b", 0.5, {autoAlpha:0, ease:Linear.easeNone});
-timelines[2].staggerFrom(".c img, .d img", 0.75, {yPercent:120}, 0.25);
+timelines[2].fromTo(".c img, .d img",  { y:350},{y:-2, duration:0.75,stagger:0.25});
 
 timelines[3].from("#article3 h1", 0.6, {rotation:90, opacity:0, transformOrigin:"left top"} );
 timelines[3].from("#article3 form", 0.75, {opacity:0, ease:Linear.easeNone} );
 
 
 // set initial article block height and position popper on first tab 
-TweenMax.set(articles[0], {autoAlpha:1});
-TweenMax.set(".slider", {x:targets[0].offsetLeft, width:targets[0].offsetWidth});
-TweenMax.set(".article-block", {height:newHeight});
+gsap.set(articles[0], {autoAlpha:1});
+gsap.set(".slider", {x:targets[0].offsetLeft, width:targets[0].offsetWidth});
+gsap.set(".article-block", {height:newHeight});
 
 // play 1st timeline on page load
 timelines[0].play();
@@ -69,9 +69,9 @@ function doCoolStuff() {
 }
 
 function newSize() {
-  TweenMax.set(".slider", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
+  gsap.set(".slider", {x:targets[activeTab].offsetLeft, width:targets[activeTab].offsetWidth});
   newHeight = articles[activeTab].offsetHeight;
-  TweenMax.set(".article-block", {height:newHeight});
+  gsap.set(".article-block", {height:newHeight});
 }
 
 
@@ -84,10 +84,10 @@ for(let i=0; i<pfPics.length;i++){
   pfPics[i].getElementsByClassName.height=pfPics[i].offsetWidth +"px";
   pfPics[i].addEventListener("mouseenter", function(e){
     
-    TweenMax.to(e.target.querySelector('img'), 2,{scale:"1.15"});
+    gsap.to(e.target.querySelector('img'), 2,{scale:"1.15"});
   })
   pfPics[i].addEventListener("mouseleave", function(e){
-    TweenMax.to(e.target.querySelector('img'),0.5, {scale:"1"})
+    gsap.to(e.target.querySelector('img'),0.5, {scale:"1"})
   })
 }
       

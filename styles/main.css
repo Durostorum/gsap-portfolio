@@ -7,25 +7,27 @@ body {
   font-family: "Roboto", sans-serif;
   overflow: hidden;
   background: #262626;
-  height: 100vh;
+  height: 100%;
 }
-
+.mainDiv {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -2rem;
+  margin-left: -2rem;
+}
 .homeScreen {
   margin-top: 20%;
 }
 
-#profilePic {
-  width: 20vw;
-  height: inherit;
-  margin-top: 3rem;
-  margin-left: 14rem;
-}
 #picHome {
   background-image: url("../images/newGimp.png");
   background-repeat: no-repeat;
   height: 100vh;
 }
 .about-div {
+  /* grid-column: 1; */
+  height: auto;
   margin: auto;
   justify-content: center;
   text-align: center;
@@ -36,16 +38,20 @@ body {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 1.5rem;
 }
-
-a img {
-  width: 14vw;
-  height: 25vh;
+#profilePic {
+  grid-column: 2;
+  width: 20vw;
+  height: inherit;
+  /* margin-top: 3rem; */
+  /* margin-left: 14rem; */
 }
+
 #control {
   width: 90%;
   max-width: 1000px;
-  min-width: 500px;
-  margin: 50px auto;
+  /* min-width: 500px; */
+  margin: auto;
+  padding-top: 10%;
 }
 
 .wrap {
@@ -120,26 +126,31 @@ p {
 
 img {
   max-width: 100%;
-  height: auto;
   width: auto;
-  display: block;
+  /* display: inline-flexbox; */
   margin: 0 auto;
-}
-
-#article4 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #article2 {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.a {
-  grid-column: 1 / span 2;
+#article4 {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+a img {
+  width: 14vw;
+  /* height: 25vh; */
+}
+.try {
+  grid-row: 1;
+  grid-column: 1;
 }
 .b {
   grid-column: 3;
@@ -152,14 +163,114 @@ img {
 
 .c {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
   justify-self: center;
   overflow: hidden;
 }
 .d {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 3;
   justify-self: center;
   overflow: hidden;
   margin-right: 2em;
+}
+.waitDescription {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  margin-top: 15%;
+}
+.trashDescription {
+  grid-column: 1;
+  grid-row: 2;
+}
+.gameDescription {
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .mainDiv {
+    background-color: darkgreen;
+  }
+  .about-div {
+    /* grid-column: 1; */
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-left: 1.5em;
+  }
+  #description {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 0.9rem;
+  }
+  #profilePic {
+    grid-column: 2;
+    width: 120%;
+    height: 50%;
+    margin-top: 3rem;
+    margin-left: 1em;
+  }
+
+  #article4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: none;
+    box-sizing: none;
+    padding: 2px 40px;
+  }
+  a img {
+    width: 50%;
+    height: 50%;
+  }
+  /* .try {
+      grid-column: 1;
+      grid-row: 1;
+    } */
+  .waitDescription {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 0.7rem;
+    margin-top: 56%;
+  }
+  .trashDescription {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 0.7rem;
+  }
+  .gameDescription {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: -79%;
+    font-size: 0.7rem;
+  }
+  .b {
+    grid-column: 2;
+    grid-row: 1;
+    height: 70%;
+    text-align: center;
+    margin-top: 19%;
+  }
+
+  .c {
+    grid-column: 2;
+    grid-row: 2;
+    height: 70%;
+    padding-bottom: 25%;
+    text-align: center;
+  }
+  .d {
+    grid-column: 2;
+    grid-row: 3;
+    height: 40%;
+    text-align: center;
+    margin-top: -100%;
+  }
+  .try {
+    grid-row: 0;
+    grid-column: 0;
+  }
 }

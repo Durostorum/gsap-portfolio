@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./styles/contact-form.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://kit.fontawesome.com/4d56a16234.js" crossorigin="anonymous"></script>
     <script src="https://fonts.googleapis.com/css?family=Roboto:400,700&;#39;"></script>
 </head>
 <body>
+  <div class="mainDiv">
     <div id="control">
         <div class="wrap">
           <div class="slider"></div>
@@ -37,22 +39,24 @@
           <div class="article" id="article2">
       
             <div class='about-div'>
-              <h1 style='margin-bottom:80px'>About Me</h1>
+              <h1>About Me</h1>
               <p id='description'>Solutions-driven full-stack web-developer leveraging experience in hospotality industry. I will solve all of your problems or some problems. I can solve A problem.
             </div>
             <img src="./images/Wedding_me2.jpg" id='profilePic'>
           </div>
          
           <div class="article" id="article4">
-            <div class="a">
-              <h1>Portfolio</h1>
-              <h3>Perfect Server is a virtual  waiter that guides customers through a single-page menu leveraging personal preferences.</h3><h4> A tourist guide showcasing the worst rated places in the area is found in the Don't Go There web-page.</h4><h5> Fun and interactive game of dice.</h5>
-      
-            </div>
             
+              <h1 class='try'>Portfolio</h1>
+              <h3 class='waitDescription'>Perfect Server is a virtual  waiter that guides customers through a single-page menu leveraging personal preferences.</h3>
+      
+           
+           
             <a href="https://server-perfect.herokuapp.com/" target="_blank" class="pfo b"><img class='b' src="./images/rest1.jpg"></a> 
-            <a href="https://durostorum.github.io/Dont-Go-There/" class="pfo c" target="_blank"><img src="./images/TrashCan.png"></a >
-            <a href='https://durostorum.github.io/Dice-Game/' class="pfo d" target="_blank"><img  src="./images/dice.jpg"></a>
+            <h4 class='trashDescription'> A tourist guide showcasing the worst rated places in the area is found in the Don't Go There web-page.</h4>
+            <a href="https://durostorum.github.io/Dont-Go-There/" class="pfo c" target="_blank"><img class='c'src="./images/TrashCan.png"></a >
+              <h5 class='gameDescription'> Fun and interactive game of dice.</h5>
+            <a href='https://durostorum.github.io/Dice-Game/' class="pfo d" target="_blank"><img  src="../newDice.jpg"></a>
           </div>
           <!-- section -->
           <div class="article" id="article3">
@@ -70,7 +74,7 @@
               </div>  
               <input type="submit" value="Submit" id="input-submit">
             </form>
-            <div id="status" class='error'></div>
+            <div id="status" class=''></div>
             <div id="connections" >
            <a href="https://github.com/Durostorum"target="_blank"> <i class="fab fa-github fa-2x" style='color:burlywood'></a></i>
            <a href="https://www.linkedin.com/in/georgi-nikolov-957a43185/">
@@ -79,7 +83,7 @@
       </div>
         </div>
       </div>
-    
+    </div>
 </body>
 <script src="./js/main.js"></script>
 <script src="./js/typeWriter.js"></script>
