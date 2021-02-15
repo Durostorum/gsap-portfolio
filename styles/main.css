@@ -37,6 +37,7 @@ body {
 #description {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 1.5rem;
+  color: black;
 }
 #profilePic {
   grid-column: 2;

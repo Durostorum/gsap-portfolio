@@ -49,9 +49,9 @@ a img {
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .mainDiv {
+  /* .mainDiv {
     background-color: darkgreen;
-  }
+  } */
   .about-div {
     height: auto;
     margin: auto;
